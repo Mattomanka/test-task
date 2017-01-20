@@ -1,0 +1,16 @@
+{
+    "dependencies": {
+        "bemto.pug": "^2.0.0",
+        "jquery": "^3.1.0",
+        "svg4everybody": "^2.1.0"
+    },
+    "devDependencies": {
+        "gulp-csscomb": "^3.0.8",
+        "eslint": "^3.12.1"
+    },
+    "scripts": {
+        "init": "cd .. && git init && cd src && npm i -D husky && git add -A && git commit -m \"init project\"",
+        "lint:eslint": "eslint markup --cache",
+        "precommit": "npm run lint:eslint --silent"
+    }
+}

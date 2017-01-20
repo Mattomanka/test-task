@@ -1,0 +1,25 @@
+{
+  "name": "awesome_project",
+  "version": "1.0.0",
+  "description": "Your awesome project description",
+  "main": "gulpfile.js",
+  "directories": {},
+  "dependencies": {
+    "bemto.pug": "^2.0.0",
+    "jquery": "^3.1.0",
+    "svg4everybody": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.1",
+    "gulp": "^3.9.1",
+    "gulp-csscomb": "^3.0.8",
+    "husky": "^0.12.0"
+  },
+  "scripts": {
+    "init": "cd .. && git init && cd src && npm i -D husky && git add -A && git commit -m \"init project\"",
+    "lint:eslint": "eslint markup --cache",
+    "precommit": "npm run lint:eslint --silent"
+  },
+  "author": "",
+  "license": "ISC"
+}
