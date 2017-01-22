@@ -1,3 +1,41 @@
+include ../icon/icon
+
 mixin header(data)
     +b.HEADER.header()&attributes(attributes)
-        block
+        +e.wrapper
+            +b.UL.buttons
+                +e.item
+                    +e.link(href=jv0) USA site
+                +e.item
+                    +e.link(href=jv0) Deutsch site
+                +e.item
+                    +e.P.text Россия:
+                    +e.link(href=jv0) Switch to english
+            +b.UL.buttons_right
+                +e.item
+                    +icon({icon: 'header-icon', class: 'buttons__icon'})
+                    +e.link(href=jv0) Онлайн-табло
+                +e.item
+                    +e.link.js-show-auth(href=jv0) Вход и регистрация
+        +e.mobile-nav
+            +e.mobile-wrapper
+                +e.mobile-nav-block
+                    +e.nav-logo-wrapper
+                        +e.IMAGE.img(src="%=static=%img/assets/logo/logo.png")
+                    +e.hamburger-block
+                        +icon({icon: 'header-mobile-menu', class: 'header__hamburger-icon js-mobile-menu'})
+            +e.mobile-links
+                +e.UL.nav-lists
+                    +e.nav-list
+                        +e.nav-link(href=jv0) USA site
+                    +e.nav-list
+                        +e.nav-link(href=jv0) Deutsch site
+                    +e.nav-list
+                        +e.P.text Россия:
+                        +e.nav-link(href=jv0) Switch to english
+                    +e.nav-list
+                        +e.nav-link(href=jv0) Онлайн-табло
+                    +e.nav-list
+                        +e.nav-link.js-show-auth(href=jv0) Вход и регистрация
+
+

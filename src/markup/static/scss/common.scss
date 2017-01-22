@@ -9,3 +9,13 @@
 html, body {
     height: 100%;
 }
+
+@font-face {
+    font-family: "heliosLightC";
+    src: url("../fonts/helioslightc.otf") format("opentype");
+}
+@font-face {
+    font-family: "heliosThinC";
+    src: url("../fonts/heliosthinc.otf") format("opentype");
+}
+

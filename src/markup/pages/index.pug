@@ -1,7 +1,12 @@
 extends ../layouts/default
+include ../components/control/control
+include ../components/tab-sections/tab-sections
+include ../components/popup/popup
 
 block vars
     -pageSettings.title = 'Главная';
 
 block content
-    // Контент здесь
+    +control()
+    +tab-sections()
+    +popup()

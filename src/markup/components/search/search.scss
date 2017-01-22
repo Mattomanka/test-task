@@ -1,0 +1,55 @@
+.search {
+    &_style {
+        position: relative;
+    }
+
+    &__input {
+        width: 250px;
+        height: 32px;
+        padding: 0 .8em;
+        margin: .5em 0 0;
+
+        font-size: .8em;
+
+        border: 1px solid $color-border-grey;
+        outline: none;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 6px;
+        right: 0;
+
+        padding: .4em .2em;
+
+        border: none;
+        cursor: pointer;
+        outline: none;
+        background-color: transparent;
+    }
+
+    &__svg {
+    }
+}
+
+@media (max-width: $tablet-viewport) {
+    .search {
+        &__input {
+            width: 150px;
+        }
+    }
+}
+
+@media (max-width: $mobile-viewport) {
+    .search {
+        &_style {
+            order: 1;
+            width: 100%;
+            padding-bottom: 1em;
+        }
+
+        &__input {
+            width: 100%;
+        }
+    }
+}

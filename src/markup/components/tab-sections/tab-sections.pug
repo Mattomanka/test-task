@@ -1,0 +1,9 @@
+include ../slider/slider
+
+mixin tab-sections(data)
+    +b.SECTION.tab-sections_style.js-tab-sections()&attributes(attributes)
+        block tab-sections
+            +e.item_active
+                +slider()
+            +e.item Информация о компании
+            +e.item Привилегии

@@ -1,0 +1,244 @@
+.slider {
+    &_style {
+        position: relative;
+
+        padding: 0 0 2em 0;
+        margin-top: 1.9em;
+
+        list-style: none inside;
+    }
+
+    &__text-content {
+        width: $container-desktop;
+        margin-right: $desktop-gutter;
+        margin-left: $desktop-gutter;
+    }
+
+    &__item {
+        outline: none;
+    }
+
+    &__text-container {
+        padding: 13.2em 5em 0;
+    }
+
+    &__text {
+        margin: 0;
+
+        font-family: 'heliosThinC';
+        font-size: 3em;
+        color: $color-white;
+        text-align: left;
+
+        transition: all ease .2s;
+
+        &_first {
+            padding-top: .1em;
+
+            font-size: 2.9em;
+            line-height: 1em;
+            letter-spacing: .02em;
+        }
+
+        &_second {
+            margin-top: -.05em;
+
+            font-family: 'heliosLightC';
+            font-size: 4.6em;
+            line-height: 1em;
+            letter-spacing: .02em;
+
+            & img {
+                display: inline-block!important;
+                padding-left: .1em;
+
+                vertical-align: super;
+            }
+        }
+
+        &_third {
+            padding: 1.1em .2em .2em;
+
+            font-size: .9em;
+            line-height: 1em;
+            letter-spacing: .01em;
+        }
+    }
+
+    &__images-content {
+        position: absolute!important;
+        top: 0;
+        right: 0;
+        left: 0;
+
+        width: calc(100% - 2em);
+        max-width: 1100px;
+        margin: auto;
+
+        box-shadow: 2px 20px 0 -16px rgba(0, 0, 0, .5);
+
+        &:after {
+            content: '';
+
+            position: absolute;
+            right: 0;
+            bottom: -10px;
+            left: 0;
+
+            width: calc(100% - 70px);
+            height: 12px;
+            margin: 0 auto;
+
+            background-color: rgba(0, 0, 0, .30);
+        }
+    }
+
+    &__img {
+    }
+}
+
+.slick {
+    &-arrow {
+        position: absolute;
+        z-index: 10;
+        top: 172px;
+
+        width: 50px;
+        height: 80px;
+
+        font-size: 0;
+
+        border: none;
+        cursor: pointer;
+        outline: none;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        transition: all ease .2s;
+    }
+
+    &-slide {
+        min-height: 340px!important;
+
+        object-fit: cover;
+    }
+
+    &-prev {
+        left: -8px;
+
+        background-image: url('%=static=%assets/slider/arrow-prev.png');
+    }
+
+    &-next {
+        right: -12px;
+
+        background-image: url('%=static=%assets/slider/arrow-next.png');
+    }
+}
+
+@media (max-width: $tablet-viewport) {
+    .slider {
+        &__text-content {
+            width: $container-mobile;
+            padding-right: $mobile-gutter;
+            padding-left: $mobile-gutter;
+        }
+
+        &__text-container {
+            padding: 11em 3.5em 0;
+        }
+    }
+
+    .slick {
+        &-arrow {
+            top: 40%;
+        }
+
+        &-prev {
+            left: 20px;
+
+            background-image: url('%=static=%assets/slider/arrow-prev.png');
+        }
+
+        &-next {
+            right: 20px;
+
+            background-image: url('%=static=%assets/slider/arrow-next.png');
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .slider {
+        &__text {
+            &_first {
+                font-size: 2.5em;
+            }
+
+            &_second {
+                font-size: 4em;
+            }
+        }
+    }
+}
+
+@media (max-width: 810px) {
+    .slider {
+        &__text {
+            &_second {
+                font-size: 3em;
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .slider {
+        &__text {
+            &_first {
+                font-size: 2em;
+            }
+
+            &_second {
+                font-size: 2.2em;
+            }
+        }
+    }
+
+    .slick {
+        &-arrow {
+            width: 25px;
+
+            background-size: contain;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .slider {
+        &__text-container {
+            padding: 4em 2.2em 0;
+        }
+
+        &__text {
+            &_first {
+                font-size: 2em;
+            }
+
+            &_second {
+                padding-top: .5em;
+
+                font-size: 2.2em;
+            }
+        }
+    }
+
+    .slick {
+        &-arrow {
+            width: 25px;
+
+            background-size: contain;
+        }
+    }
+}

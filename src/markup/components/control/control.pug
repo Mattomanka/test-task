@@ -1,0 +1,10 @@
+include ../logo/logo
+include ../tabs/tabs
+include ../search/search
+
+mixin control(data)
+    +b.SECTION.control_style()&attributes(attributes)
+        +e.wrapper
+            +logo()
+            +tabs(["Возможности", "Информация", "Привилегии"])
+            +search()

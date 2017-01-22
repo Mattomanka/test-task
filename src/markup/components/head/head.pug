@@ -6,7 +6,7 @@ head
     title= pageSettings.title
     meta(content="", name="description")
     meta(content="", name="keywords")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0")
     meta(content="telephone=no", name="format-detection")
     //- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers
     meta(name="HandheldFriendly", content="true")
@@ -14,6 +14,9 @@ head
     |<!--[if IE 8 ]><link href="%=static=%css/main_ie8%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><![endif]-->
     |<!--[if IE 9 ]><link href="%=static=%css/main_ie9%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><![endif]-->
     |<!--[if (gt IE 9)|!(IE)]><!--><link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><!--<![endif]-->
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 
     if pageSettings.useSocialMetaTags
         meta(property="og:title", content="#{data.title}")

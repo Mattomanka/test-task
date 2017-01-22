@@ -1,0 +1,62 @@
+.tabs {
+    &_style {
+        padding-left: 1.8em;
+
+        font-family: $font-ptsans;
+    }
+
+    &__item {
+        display: inline-block;
+        padding: .6em .64em 1.75em;
+
+        border-top: 2px solid $color-white;
+        border-right: 1px solid $color-white;
+        border-left: 1px solid $color-white;
+        cursor: pointer;
+
+        transition: all ease .2s;
+
+        &:hover {
+            color: $color-active-red;
+        }
+
+        &_active {
+            padding: .6em .9em 1.84em;
+
+            color: $color-active-red;
+
+            border-top: 2px solid $color-active-red;
+            border-right: 1px solid $color-border-grey;
+            border-left: 1px solid $color-border-grey;
+            cursor: default;
+            background-color: $color-white;
+        }
+    }
+}
+
+@media (max-width: $tablet-viewport) {
+    .tabs {
+        &_style {
+            padding-left: 1em;
+        }
+    }
+}
+
+@media (max-width: $mobile-viewport) {
+    .tabs {
+        &_style {
+            order: 2;
+            padding: 0;
+        }
+
+        &__item {
+            padding: .6em .2em 1.75em;
+
+            font-size: .9em;
+
+            &_active {
+                padding: .6em .4em 1.84em;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+include ../icon/icon
+
+mixin search(data)
+    +b.search_style()&attributes(attributes)
+        block search
+            +e.FORM.form
+                +e.INPUT.input(placeholder="поиск по сайту")
+                +e.BUTTON.btn(type="submit")
+                    +icon({icon: 'search', class: 'search__svg'})

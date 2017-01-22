@@ -1,2 +1,25 @@
 // File for scss-vars.
 // For example: main colors, paddings and so on.
+
+$tablet-viewport: 992px;
+$mobile-viewport: 768px;
+
+/* Container */
+$container-desktop: 960px;
+$container-tablet: 100%;
+$container-mobile: 100%;
+
+/* Gutter */
+$mobile-gutter: 1em;
+$tablet-gutter: 1em;
+$desktop-gutter: auto;
+
+/* Colors */
+$color-header-bg: #f0f0f0;
+$color-header-link: #0c4da2;
+$color-active-red: #e7435d;
+$color-border-grey: #c8c8c8;
+$color-white: #fff;
+
+/* Fonts */
+$font-ptsans: 'PT Sans', sans-serif;

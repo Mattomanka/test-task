@@ -1,0 +1,15 @@
+.tab-sections {
+    &_style {
+        padding-bottom: 4em;
+
+        text-align: center;
+    }
+
+    &__item {
+        display: none;
+
+        &_active {
+            display: block;
+        }
+    }
+}

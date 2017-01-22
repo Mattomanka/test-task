@@ -1,0 +1,154 @@
+.auth-popup {
+    &.is-opened {
+        height: 100%;
+
+        opacity: 1;
+    }
+
+    &_style {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+
+        opacity: 0;
+        background-color: rgba(0, 0, 0, .5);
+
+        transition: opacity .15s linear;
+    }
+
+    &__content {
+        position: absolute;
+        top: 100px;
+        right: 0;
+        left: 0;
+
+        width: 400px;
+        padding: 1em;
+        margin: auto;
+
+        font-family: $font-ptsans;
+        color: #000;
+
+        border: 1px solid #f2f6f7;
+        border-radius: 3px;
+        background-color: #fff;
+        transform: translate3d(0,75%,0);
+
+        transition: transform .3s ease-out;
+
+        &.slide-up {
+            transform: translate3d(0,0,0);
+        }
+    }
+
+    &__header {
+        position: relative;
+    }
+
+    &__close {
+        position: absolute;
+        top: -5px;
+        right: 18px;
+
+        width: 15px;
+        height: 15px;
+
+        cursor: pointer;
+    }
+
+    &__form {
+        max-width: 500px;
+    }
+
+    &__field {
+        margin-bottom: 1em;
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: .2em;
+    }
+
+    &__input {
+        width: 100%;
+        padding: .8em 1em;
+
+        font-size: .8em;
+
+        border: 1px solid rgba(34, 36, 38, .15);
+        border-radius: 4px;
+        outline: 0;
+
+        -webkit-appearance: none;
+    }
+
+    &__alert {
+        display: none;
+        padding: .3em .8em;
+        margin: .3em 0 0 0;
+
+        font-size: .9em;
+
+        border-radius: 3px;
+
+        &.show {
+            display: block;
+        }
+
+        &_success {
+            color: #0a7c71;
+
+            border-color: #0a7c71;
+            background-color: #cff5f2;
+        }
+
+        &_error {
+            color: #933432;
+
+            border-color: #933432;
+            background-color: #fddddd;
+        }
+    }
+
+    &__error-text {
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+
+    &__submit {
+        padding: 1em 1.2em;
+
+        font-size: .8em;
+        font-weight: 700;
+        color: rgba(0, 0, 0, .6);
+
+        border: 0;
+        border-radius: 3px;
+        cursor: pointer;
+        outline: 0;
+        background-color: #e0e1e2;
+
+        transition: background-color 300ms ease;
+
+        &:hover {
+            background-color: #cacbcd;
+        }
+    }
+}
+
+@media (max-width: $mobile-viewport) {
+    .auth-popup {
+        &__content {
+            width: calc(100% - 2em);
+        }
+    }
+}

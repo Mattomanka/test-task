@@ -1,0 +1,8 @@
+mixin tabs(data)
+    +b.tabs_style.js-tabs()&attributes(attributes)
+        block tabs
+            each name,index in data
+                if index == 0
+                    +e.item_active= name
+                else 
+                    +e.item= name

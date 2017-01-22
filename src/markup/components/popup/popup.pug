@@ -1,0 +1,29 @@
+include ../icon/icon
+
+mixin popup(data)
+    +b.auth-popup_style()&attributes(attributes)
+        block popup
+            +e.content
+                +e.header
+                    +e.H2 Signin
+                    +e.close
+                        +icon({icon: 'close', class: ''})
+                +e.FORM.form(novalidate="")
+                    +e.field
+                        +e.LABEL.label(for="auth-popup__email") Email
+                        +e.INPUT.input#auth-popup__email(type="email" name="auth-email" value="t-rex@gmail.com" placeholder="Enter your e-mail")
+                        +e.P.alert_error
+                            +e.SPAN.error-text.js-auth-email-required The fild is empty
+                            +e.SPAN.error-text.js-auth-email-incorrect Entered email is incorrect
+                    +e.field
+                        +e.LABEL.label(for="auth-popup__password") Password
+                        +e.INPUT.input#auth-popup__password(type="password" name="auth-password" value="1111" placeholder="Enter your password")
+                        +e.P.alert_error
+                            +e.SPAN.error-text.js-auth-password-required The fild is empty
+                    +e.BUTTON.submit.js-auth-send(type="submit") Submit
+                    +e.P.alert_error
+                        +e.SPAN.error-text.js-auth-data-incorrect The e-mail/password is incorrect
+                    +e.P.alert_success The user has been logged
+
+
+
