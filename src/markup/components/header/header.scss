@@ -45,9 +45,11 @@
                 display: block;
                 padding: .3em;
 
-                & p {
-                    display: inline-block;
-                    margin: 0 .1em 0 0;
+                .header {
+                    &__text {
+                        display: inline-block;
+                        margin: 0 .1em 0 0;
+                    }
                 }
             }
 

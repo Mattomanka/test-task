@@ -1,4 +1,4 @@
-let AuthErrorCodes = {
+const AuthErrorCodes = {
     EMAIL_EMPTY: 0,
     EMAIL_INVALID: 1,
     PASSWORD_EMPTY: 2

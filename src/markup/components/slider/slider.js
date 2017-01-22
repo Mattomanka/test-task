@@ -17,7 +17,7 @@ let Slider = (() => {
     };
 
     return {
-        init: init
+        init
     };
 
 })();
